@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarthak Kardom - Premium Condoms</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s, color 0.5s;
+            line-height: 1.6;
+        }
+        .light-theme {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+        }
+        button:hover {
+            background-color: #367c39;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .theme-toggle {
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 0;
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* Featured Categories */
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 0;
+            flex-wrap: wrap;
+        }
+        .category {
+            text-align: center;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            width: 150px;
+        }
+        .category:hover {
+            transform: translateY(-5px);
+        }
+        .category img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        /* Products */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            transition: box-shadow 0.3s;
+        }
+        .product:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .product img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .product h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .product p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        /* Founder's Message */
+        .founder-message {
+            padding: 40px 0;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        .founder-message h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .founder-message p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+        }
+        footer a {
+            color: #fff;
+            margin: 0 10px;
+        }
+
+        /* Cart */
+        .cart-icon {
+            font-size: 24px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .categories {
+                flex-direction: column;
+                align-items: center;
+            }
+            .category {
+                width: 80%;
+            }
+            .products {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <div class="container">
+        <header>
+            <h1>Sarthak Kardom</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒<span class="cart-count">0</span>
+            </div>
+            <div class="theme-toggle" onclick="toggleTheme()">🔆</div>
+        </header>
+
+        <section class="hero">
+            <h1>Discover the Perfect Fit</h1>
+            <p>Experience ultimate comfort and safety with our premium condoms.</p>
+            <button>Shop Now</button>
+        </section>
+
+        <section class="categories">
+            <div class="category">
+                <img src="https://via.placeholder.com/50" alt="Sizes">
+                <h3>Sizes</h3>
+            </div>
+            <div class="category">
+                <img src="https://via.placeholder.com/50" alt="Flavors">
+                <h3>Flavors</h3>
+            </div>
+            <div class="category">
+                <img src="https://via.placeholder.com/50" alt="Textures">
+                <h3>Textures</h3>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="product">
+                <img src="https://via.placeholder.com/250" alt="Product 1">
+                <h3>Classic Condom</h3>
+                <p>Reliable protection for everyday use.</p>
+                <button onclick="addToCart('Classic Condom')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250" alt="Product 2">
+                <h3>Flavored Condom - Strawberry</h3>
+                <p>Enjoy a sweet and safe experience.</p>
+                <button onclick="addToCart('Flavored Condom - Strawberry')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250" alt="Product 3">
+                <h3>Ultra-Thin Condom</h3>
+                <p>Maximum sensitivity for a natural feel.</p>
+                <button onclick="addToCart('Ultra-Thin Condom')">Add to Cart</button>
+            </div>
+        </section>
+
+        <section class="founder-message">
+            <h2>A Message from Sarthak Kardom</h2>
+            <p>
+                "At Sarthak Kardom, we believe that safety and pleasure should go hand in hand. Using condoms is crucial for protecting yourself and your partner from STIs and unwanted pregnancies. Our mission is to provide high-quality condoms that ensure both safety and satisfaction. Stay safe, stay protected!"
+            </p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Sarthak Kardom. All rights reserved.</p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </footer>
+    </div>
+
+    <script>
+        let cartCount = 0;
+
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-theme');
+            const themeToggle = document.querySelector('.theme-toggle');
+            themeToggle.textContent = body.classList.contains('dark-theme') ? '🌙' : '🔆';
+        }
+
+        function addToCart(productName) {
+            cartCount++;
+            document.querySelector('.cart-count').textContent = cartCount;
+            alert(productName + ' added to cart!');
+        }
+
+        function toggleCart() {
+            alert('Your cart has ' + cartCount + ' items.');
+        }
+    </script>
+</body>
+</html>
